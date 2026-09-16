@@ -278,7 +278,7 @@ function render(){
     h("header", { class: "top" },
       h("p", { class: "eyebrow", text: "Projeto Integrador BI · Spoleto Shop Estação Cuiabá" }),
       h("h1", { text: "Sprints do BI Spoleto" }),
-      h("p", { class: "lede", text: "Controle das 13 sprints semanais, de segunda a sexta. Escolha quem faz cada tarefa, acompanhe o andamento e avise o grupo no WhatsApp quando uma sprint começar." })
+      h("p", { class: "lede", text: "Controle das " + state.sprints.length + " sprints semanais, de segunda a sexta. Escolha quem faz cada tarefa, acompanhe o andamento e avise o grupo no WhatsApp quando uma sprint começar." })
     ),
     renderAjuda(),
     renderGitAjuda(),

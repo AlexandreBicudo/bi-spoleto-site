@@ -1,5 +1,5 @@
 {
- "versao": 3,
+ "versao": 4,
  "inicio": "2026-09-14",
  "pessoas": [
   "Alexandre",
@@ -116,8 +116,8 @@
    "n": 8,
    "parte": 2,
    "fase": "Modelagem",
-   "objetivo": "Fatos carregados e reconciliados",
-   "entrega": "Modelo estrela completo com testes de reconciliação",
+   "objetivo": "Fatos reconciliados e wireframes aprovados",
+   "entrega": "Modelo estrela completo com testes e rascunho das páginas",
    "marco": "M4 Modelo estrela",
    "status": "planejada",
    "iniciadaEm": null,
@@ -127,8 +127,8 @@
    "n": 9,
    "parte": 2,
    "fase": "Dashboard",
-   "objetivo": "Dashboard conectado e primeira página",
-   "entrega": "Wireframes, medidas base e página Visão geral",
+   "objetivo": "Dashboard conectado e primeiras páginas",
+   "entrega": "Conexão, medidas base, Visão geral e Vendas e sazonalidade",
    "marco": "",
    "status": "planejada",
    "iniciadaEm": null,
@@ -138,8 +138,8 @@
    "n": 10,
    "parte": 2,
    "fase": "Dashboard",
-   "objetivo": "Páginas de vendas",
-   "entrega": "Vendas e sazonalidade, Cardápio e Canais",
+   "objetivo": "Todas as páginas prontas",
+   "entrega": "Cardápio, Canais, Operação e Pagamentos",
    "marco": "",
    "status": "planejada",
    "iniciadaEm": null,
@@ -148,10 +148,10 @@
   {
    "n": 11,
    "parte": 2,
-   "fase": "Dashboard e validação",
-   "objetivo": "Dashboard completo e publicado",
-   "entrega": "Operação, Pagamentos e versão beta publicada",
-   "marco": "M5 Dashboard beta",
+   "fase": "Validação e documentação",
+   "objetivo": "Projeto pronto até o fim de novembro",
+   "entrega": "Dashboard publicado, validado, corrigido e documentado, com rascunho do relatório",
+   "marco": "M5 Projeto pronto",
    "status": "planejada",
    "iniciadaEm": null,
    "concluidaEm": null
@@ -159,20 +159,9 @@
   {
    "n": 12,
    "parte": 2,
-   "fase": "Documentação",
-   "objetivo": "Correções e documentação",
-   "entrega": "Documentação técnica e rascunho do relatório",
-   "marco": "",
-   "status": "planejada",
-   "iniciadaEm": null,
-   "concluidaEm": null
-  },
-  {
-   "n": 13,
-   "parte": 2,
    "fase": "Entrega",
-   "objetivo": "Entrega final",
-   "entrega": "Relatório, apresentação e release v1.0",
+   "objetivo": "Etapa final",
+   "entrega": "Relatório final, apresentação e release v1.0",
    "marco": "M6 Entrega final",
    "status": "planejada",
    "iniciadaEm": null,
@@ -552,7 +541,7 @@
   },
   {
    "id": "t27",
-   "sprint": 9,
+   "sprint": 8,
    "titulo": "Wireframes das páginas",
    "passos": [
     "Um rascunho por página",
@@ -609,7 +598,7 @@
   },
   {
    "id": "t31",
-   "sprint": 10,
+   "sprint": 9,
    "titulo": "Página Vendas e sazonalidade",
    "passos": [
     "Série diária, semanal e mensal",
@@ -651,7 +640,7 @@
   },
   {
    "id": "t34",
-   "sprint": 11,
+   "sprint": 10,
    "titulo": "Página Operação e cozinha",
    "passos": [
     "Mapa de calor por dia e hora",
@@ -665,7 +654,7 @@
   },
   {
    "id": "t35",
-   "sprint": 11,
+   "sprint": 10,
    "titulo": "Página Pagamentos e caixa",
    "passos": [
     "Mix de pagamento e bandeiras",
@@ -706,7 +695,7 @@
   },
   {
    "id": "t38",
-   "sprint": 12,
+   "sprint": 11,
    "titulo": "Corrigir os problemas da validação",
    "passos": [
     "Priorizar as issues abertas",
@@ -719,7 +708,7 @@
   },
   {
    "id": "t39",
-   "sprint": 12,
+   "sprint": 11,
    "titulo": "Documentação técnica",
    "passos": [
     "README final",
@@ -733,7 +722,7 @@
   },
   {
    "id": "t40",
-   "sprint": 12,
+   "sprint": 11,
    "titulo": "Rascunho do relatório escrito",
    "passos": [
     "Estrutura: problema, metodologia, arquitetura, higienização, modelo, resultados, uso de IA e limitações",
@@ -746,7 +735,7 @@
   },
   {
    "id": "t41",
-   "sprint": 13,
+   "sprint": 12,
    "titulo": "Relatório final",
    "passos": [
     "Revisão cruzada do texto",
@@ -759,7 +748,7 @@
   },
   {
    "id": "t42",
-   "sprint": 13,
+   "sprint": 12,
    "titulo": "Apresentação",
    "passos": [
     "Slides",
@@ -773,7 +762,7 @@
   },
   {
    "id": "t43",
-   "sprint": 13,
+   "sprint": 12,
    "titulo": "Release v1.0 no GitHub",
    "passos": [
     "Anexar relatório, slides e link do dashboard",
