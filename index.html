@@ -135,7 +135,15 @@ button,select,input,textarea{font:inherit;color:inherit}
 .fc-obj{font-size:.9rem;color:var(--ink)}
 .fc-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px 20px}
 .fc-block{display:grid;gap:4px;align-content:start}
-.fc-block h4{font:600 .66rem/1.2 var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0}
+.fc-block h4{font:600 .66rem/1.2 var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0;display:flex;align-items:center;gap:10px}
+.fc-ctx{font-size:.88rem;color:var(--ink-2);border-left:2px solid var(--rule-strong);padding-left:10px}
+details.cmds{margin-top:10px;border-top:1px solid var(--rule);padding-top:10px}
+details.cmds summary{cursor:pointer;font-weight:600;font-size:.88rem;color:var(--accent)}
+.cmds-body{display:grid;gap:8px;margin-top:8px;justify-items:start}
+.cmds-body pre{width:100%}
+.gloss{display:grid;gap:10px;margin:0}
+.gloss dt{font-weight:600;color:var(--ink);font-size:.86rem}
+.gloss dd{margin:2px 0 0;font-size:.86rem;color:var(--ink-2)}
 .fc-block ul{padding-left:1.1em;color:var(--ink-2);font-size:.85rem;display:grid;gap:2px}
 pre.prompt{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:400 .8rem/1.5 var(--font-mono);background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:10px 12px;color:var(--ink)}
 .ficha code{font-family:var(--font-mono);font-size:.82em;background:var(--surface);border-radius:4px;padding:.08em .35em}
@@ -267,6 +275,7 @@ function render(){
       h("p", { class: "lede", text: "Controle das 13 sprints semanais, de segunda a sexta. Escolha quem faz cada tarefa, acompanhe o andamento e avise o grupo no WhatsApp quando uma sprint começar." })
     ),
     renderAjuda(),
+    renderGlossario(),
     renderBar(),
     h("div", { class: "stats" },
       stat("Sprint atual", cur ? "S" + cur : "Fora do calendário", cur ? dm(range(cur).s) + " a " + dmy(range(cur).e) : "Confira a data de início"),
@@ -372,6 +381,7 @@ function renderSprint(sp, cur){
       ),
       vis.map(renderTask),
       vis.length === 0 ? h("p", { class: "note", text: ts.length ? "Nenhuma tarefa desta sprint para o filtro escolhido." : "Nenhuma tarefa nesta sprint." }) : null,
+      renderComandosSprint(sp, ts),
       readOnly() ? null : h("div", { class: "add-row" }, h("button", { class: "btn ghost", type: "button", onclick: () => openTaskDialog(null, sp.n) }, "+ Adicionar tarefa"))
     ));
   }
@@ -422,18 +432,69 @@ function fichaMarkdown(t, f){
   return L.join("\n");
 }
 
+function comandosDaTarefa(t, f){
+  if (!f.branch) return null;
+  const tipo = f.branch.split("/")[0];
+  const titulo = t.titulo.charAt(0).toLowerCase() + t.titulo.slice(1);
+  return ["git checkout main && git pull",
+    "git checkout -b " + f.branch,
+    "# faça a tarefa e rode os testes de sql/tests",
+    "git add .",
+    "git commit -m \"" + tipo + ": " + titulo + "\"",
+    "git push -u origin " + f.branch,
+    "gh pr create --fill --base main --body \"Closes #" + t.issue + "\""].join("\n");
+}
+
+function renderComandosSprint(sp, ts){
+  const linhas = [];
+  ts.forEach(t => {
+    const f = (state.fichas || {})[t.id];
+    const cmd = f ? comandosDaTarefa(t, f) : null;
+    if (cmd) linhas.push("# " + t.id.toUpperCase() + " · " + t.titulo + " · " + (t.responsavel || "a definir"), cmd, "");
+  });
+  if (!linhas.length) return null;
+  const texto = linhas.join("\n").trim();
+  return h("details", { class: "cmds" },
+    h("summary", { text: "Comandos de branch e pull request da S" + sp.n }),
+    h("div", { class: "cmds-body" },
+      h("p", { class: "note", text: "Um branch e um pull request por tarefa. O Closes no corpo fecha a issue quando o pull request entra na main." }),
+      h("pre", { class: "prompt", text: texto }),
+      h("button", { class: "btn ghost", type: "button", onclick: () => copiar(texto, "Comandos da sprint copiados.") }, "Copiar todos os comandos")
+    )
+  );
+}
+
+function renderGlossario(){
+  if (!state.glossario || !state.glossario.length) return null;
+  return h("details", { class: "ajuda" },
+    h("summary", { text: "Glossário: perguntas P1 a P11 e termos do projeto" }),
+    h("div", { class: "ajuda-body" },
+      h("p", { text: "Se um termo da ficha não estiver claro, procure aqui antes de começar." }),
+      h("dl", { class: "gloss" }, state.glossario.map(g => [h("dt", { text: g.t }), h("dd", { text: g.d })]))
+    )
+  );
+}
+
 function renderFicha(t, f){
   const bloco = (titulo, itens) => itens && itens.length
     ? h("div", { class: "fc-block" }, h("h4", { text: titulo }), h("ul", null, itens.map(i => h("li", { text: i }))))
     : null;
   const sp = state.sprints[t.sprint - 1];
+  const cmd = comandosDaTarefa(t, f);
   return h("div", { class: "ficha", id: "ficha-" + t.id },
+    f.ctx ? h("p", { class: "fc-ctx", text: f.ctx }) : null,
     h("p", { class: "fc-obj" }, h("b", { text: "Objetivo: " }), f.obj),
     h("div", { class: "fc-cols" }, bloco("Entradas", f.ent), bloco("Saída", f.sai), bloco("Regras de higienização", f.reg), bloco("Pronto quando", f.pronto)),
-    f.prompt ? h("div", { class: "fc-block" }, h("h4", { text: "Prompt pronto para a trilha com IA" }), h("pre", { class: "prompt", text: f.prompt })) : null,
+    f.prompt ? h("div", { class: "fc-block" },
+      h("h4", null, "Prompt pronto para a trilha com IA", h("button", { class: "btn ghost", type: "button", onclick: () => copiar(f.prompt, "Prompt copiado.") }, "Copiar")),
+      h("pre", { class: "prompt", text: f.prompt })) : null,
+    cmd ? h("div", { class: "fc-block" },
+      h("h4", null, "Comandos do Git", h("button", { class: "btn ghost", type: "button", onclick: () => copiar(cmd, "Comandos copiados.") }, "Copiar")),
+      h("pre", { class: "prompt", text: cmd })) : null,
     f.branch
       ? h("p", { class: "note" }, "Entrega na branch ", h("code", { text: f.branch }), ", com pull request, revisão de outra pessoa e o checklist do repositório.")
       : h("p", { class: "note", text: "Entrega: registre o resultado em docs/semanas/ e avise no grupo." }),
+    t.issue && state.repo ? h("p", { class: "note" }, h("a", { href: state.repo + "/issues/" + t.issue, target: "_blank", rel: "noopener" }, "Abrir a issue #" + t.issue + " no GitHub")) : null,
     sp ? h("p", { class: "note", text: "S" + t.sprint + " · " + sp.fase + " · entrega da semana: " + sp.entrega }) : null
   );
 }

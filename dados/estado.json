@@ -1,5 +1,5 @@
 {
- "versao": 2,
+ "versao": 3,
  "inicio": "2026-09-14",
  "pessoas": [
   "Alexandre",
@@ -192,7 +192,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 1
   },
   {
    "id": "t02",
@@ -204,7 +205,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 2
   },
   {
    "id": "t03",
@@ -218,7 +220,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 3
   },
   {
    "id": "t04",
@@ -232,7 +235,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 4
   },
   {
    "id": "t05",
@@ -246,7 +250,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 5
   },
   {
    "id": "t06",
@@ -260,7 +265,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 6
   },
   {
    "id": "t07",
@@ -273,7 +279,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 7
   },
   {
    "id": "t08",
@@ -286,7 +293,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 8
   },
   {
    "id": "t09",
@@ -298,7 +306,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 9
   },
   {
    "id": "t10",
@@ -311,7 +320,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 10
   },
   {
    "id": "t11",
@@ -324,7 +334,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 11
   },
   {
    "id": "t12",
@@ -338,7 +349,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 12
   },
   {
    "id": "t13",
@@ -351,7 +363,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 13
   },
   {
    "id": "t14",
@@ -364,7 +377,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 14
   },
   {
    "id": "t15",
@@ -377,7 +391,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 15
   },
   {
    "id": "t16",
@@ -390,7 +405,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 16
   },
   {
    "id": "t17",
@@ -403,7 +419,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 17
   },
   {
    "id": "t18",
@@ -417,7 +434,8 @@
    ],
    "responsavel": "Alexandre",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 18
   },
   {
    "id": "t19",
@@ -431,7 +449,8 @@
    ],
    "responsavel": "Todos",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 19
   },
   {
    "id": "t20",
@@ -444,7 +463,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 20
   },
   {
    "id": "t21",
@@ -457,7 +477,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 21
   },
   {
    "id": "t22",
@@ -470,7 +491,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 22
   },
   {
    "id": "t23",
@@ -483,7 +505,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 23
   },
   {
    "id": "t24",
@@ -496,7 +519,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 24
   },
   {
    "id": "t25",
@@ -509,7 +533,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 25
   },
   {
    "id": "t26",
@@ -522,7 +547,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 26
   },
   {
    "id": "t27",
@@ -535,7 +561,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 27
   },
   {
    "id": "t28",
@@ -548,7 +575,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 28
   },
   {
    "id": "t29",
@@ -562,7 +590,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 29
   },
   {
    "id": "t30",
@@ -575,7 +604,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 30
   },
   {
    "id": "t31",
@@ -588,7 +618,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 31
   },
   {
    "id": "t32",
@@ -601,7 +632,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 32
   },
   {
    "id": "t33",
@@ -614,7 +646,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 33
   },
   {
    "id": "t34",
@@ -627,7 +660,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 34
   },
   {
    "id": "t35",
@@ -640,7 +674,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 35
   },
   {
    "id": "t36",
@@ -653,7 +688,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 36
   },
   {
    "id": "t37",
@@ -665,7 +701,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 37
   },
   {
    "id": "t38",
@@ -677,7 +714,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 38
   },
   {
    "id": "t39",
@@ -690,7 +728,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 39
   },
   {
    "id": "t40",
@@ -702,7 +741,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 40
   },
   {
    "id": "t41",
@@ -714,7 +754,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 41
   },
   {
    "id": "t42",
@@ -727,7 +768,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 42
   },
   {
    "id": "t43",
@@ -739,7 +781,8 @@
    ],
    "responsavel": "",
    "revisao": "",
-   "status": "a_fazer"
+   "status": "a_fazer",
+   "issue": 43
   }
  ],
  "fichas": {
@@ -760,7 +803,8 @@
     "Colunas de token e senha vazias"
    ],
    "prompt": "Leia GCOM_BASE_CONHECIMENTO.md, seção 11.\nGere um script T-SQL que apague ou mascare, no banco GCOM_ACADEMICO, as colunas de dados pessoais e de credenciais listadas ali.\nAs contagens de linhas devem continuar iguais.\nExplique cada UPDATE antes de eu rodar.",
-   "branch": "chore/1-banco-sanitizado"
+   "branch": "chore/1-banco-sanitizado",
+   "ctx": "O backup original tem CPF, nome, telefone, endereço do cliente e tokens de integração, além de dados de cartão. Nada disso pode circular entre cinco pessoas nem ir para uma IA. Esta tarefa cria a cópia que o grupo vai usar o semestre inteiro."
   },
   "t02": {
    "obj": "Separar dados brutos, limpos e modelo em três schemas.",
@@ -771,7 +815,8 @@
     "Os três schemas existem no banco",
     "O README explica o papel de cada um"
    ],
-   "branch": "chore/2-schemas"
+   "branch": "chore/2-schemas",
+   "ctx": "Separar em três schemas evita o problema clássico de misturar dado bruto com dado tratado. Se uma regra de limpeza mudar, você recria o stg sem tocar no raw."
   },
   "t03": {
    "obj": "Repositório privado com a estrutura do roadmap e o grupo convidado.",
@@ -784,7 +829,8 @@
    "pronto": [
     "Cada pessoa consegue clonar",
     "Nenhum .bak, .zip ou .env versionado"
-   ]
+   ],
+   "ctx": "O repositório é onde o trabalho acontece e também é entregável da disciplina. A estrutura de pastas segue o roadmap para ninguém inventar caminho novo no meio do caminho."
   },
   "t04": {
    "obj": "Descobrir se dá para publicar o dashboard sem custo.",
@@ -797,7 +843,8 @@
    ],
    "pronto": [
     "Um link de teste abre fora da rede do grupo"
-   ]
+   ],
+   "ctx": "O Power BI Desktop é gratuito, mas publicar na web depende de a conta da faculdade liberar. Descobrir isso agora evita retrabalho na sprint 11, quando o dashboard precisa estar no ar."
   },
   "t05": {
    "obj": "Saber exatamente quais campos os backups JSON trazem.",
@@ -811,7 +858,8 @@
     "Os 11 arquivos JSON documentados",
     "Diferenças em relação às tabelas do banco anotadas"
    ],
-   "prompt": "Tenho amostras dos arquivos JSON abaixo, de dias diferentes (2023, 2025 e 2026).\nListe campos, tipos e formatos de data de cada arquivo e aponte diferenças entre os dias.\nNão escreva código de carga ainda."
+   "prompt": "Tenho amostras dos arquivos JSON abaixo, de dias diferentes (2023, 2025 e 2026).\nListe campos, tipos e formatos de data de cada arquivo e aponte diferenças entre os dias.\nNão escreva código de carga ainda.",
+   "ctx": "São 1.249 arquivos zip, um por dia de expurgo, cada um com 11 JSON. Antes de programar a carga é preciso saber se os campos mudaram ao longo dos três anos."
   },
   "t06": {
    "obj": "Carregar todo o histórico em tabelas raw, sem dados pessoais.",
@@ -829,7 +877,8 @@
     "Contagem por ano registrada no log"
    ],
    "prompt": "Leia docs/inventario-fontes.md.\nEscreva etl/carga_json.py que lê os zips diários de bkp_vendas.zip e grava tabelas raw_* no SQL Server com pyodbc.\nRequisitos: descartar as colunas pessoais listadas no documento, gravar a data da carga e ser idempotente.\nNão invente colunas: use só as do documento.",
-   "branch": "feat/6-carga-json"
+   "branch": "feat/6-carga-json",
+   "ctx": "Essa carga traz o histórico que não está mais no banco: cerca de 123 mil vendas desde fevereiro de 2023. É a base de tudo que envolve comparação com o ano anterior."
   },
   "t07": {
    "obj": "Conhecer tamanho e qualidade de cada tabela antes de limpar.",
@@ -841,7 +890,8 @@
     "Contagem, período, nulos e valores distintos das tabelas principais"
    ],
    "prompt": "Escreva uma consulta T-SQL de perfilamento que, para a tabela indicada, devolva: total de linhas, menor e maior data, percentual de nulos por coluna e os 10 valores mais frequentes das colunas de código.",
-   "branch": "feat/7-perfilamento"
+   "branch": "feat/7-perfilamento",
+   "ctx": "Perfilar é olhar o tamanho e a sujeira de cada tabela antes de escrever regra. Descobre coluna sempre nula, data fora de faixa e código que não existe em lugar nenhum."
   },
   "t08": {
    "obj": "Garantir que o histórico carregado bate com o banco.",
@@ -850,7 +900,8 @@
     "Faturamento mensal próximo do fechamento de caixa"
    ],
    "prompt": "Escreva consultas SQL que comparem, por ano e por mês:\n1) pedidos do raw contra COUNT(DISTINCT dc_cpl_cmd) de log_done com cmd_log de VENDA;\n2) faturamento do raw contra SUM(vl_ven) de caixa_encerrado.\nMostre diferença absoluta e percentual.",
-   "branch": "test/8-confere-raw"
+   "branch": "test/8-confere-raw",
+   "ctx": "Se o histórico carregado não bater com o que o banco registrou, todo o resto fica errado. Esta é a primeira prova de que a coleta funcionou."
   },
   "t09": {
    "obj": "Documentar de onde vem cada número do BI.",
@@ -861,7 +912,8 @@
    "pronto": [
     "Toda tabela usada no BI tem cobertura, grão e uso descritos",
     "Colunas usadas no BI com significado e formato"
-   ]
+   ],
+   "ctx": "O inventário responde de onde vem cada número e até quando ele existe. É o documento que evita a pergunta eterna de por que o valor mudou."
   },
   "t10": {
    "obj": "Transformar os 16 problemas de dados em regras com teste.",
@@ -874,7 +926,8 @@
    "pronto": [
     "Cada regra tem tratamento e teste",
     "Casos em aberto decididos e marcados como tal"
-   ]
+   ],
+   "ctx": "São os 16 problemas já mapeados no banco, como datas em texto e motivos de cancelamento digitados errado. Escrever a regra antes do código é o que impede cada pessoa de resolver do seu jeito."
   },
   "t11": {
    "obj": "Padronizar canal de venda e motivo de cancelamento.",
@@ -888,7 +941,8 @@
     "Pelo menos 90% dos cancelamentos classificados"
    ],
    "prompt": "A coluna dc_mot_can tem texto livre com erros de digitação. A partir da lista de valores distintos abaixo, proponha um de-para para as categorias: cliente desistiu, iFood, falta de produto, erro ou duplicidade, teste, outros.\nDevolva um CSV com valor_original e categoria, sem criar categorias novas.",
-   "branch": "feat/11-de-para"
+   "branch": "feat/11-de-para",
+   "ctx": "O canal está espalhado em três colunas e o motivo de cancelamento tem dezenas de grafias diferentes. O de-para transforma isso em categorias estáveis para o dashboard."
   },
   "t12": {
    "obj": "Uma linha por pedido, com datas e valores tratados, canal resolvido e marcação de venda válida.",
@@ -914,7 +968,8 @@
     "Nenhum nr_orc_loc repetido"
    ],
    "prompt": "Leia AGENTS.md, GCOM_BASE_CONHECIMENTO.md (seções 6.1, 7.1 e 9) e docs/regras-higienizacao.md.\nTarefa: criar sql/02_staging/stg_pedido.sql conforme a ficha T12.\nEntradas, colunas de saída e regras: exatamente as da ficha, sem inventar colunas.\nNão altere nada em sql/tests/.\nPronto quando sql/tests/test_stg_pedido.sql retornar 0 linhas.\nExplique em até 5 linhas o que a view faz.",
-   "branch": "feat/12-stg-pedido"
+   "branch": "feat/12-stg-pedido",
+   "ctx": "É a view mais importante do projeto: o cabeçalho da venda. Ela une o histórico em JSON com a janela recente do banco e marca o que conta como faturamento."
   },
   "t13": {
    "obj": "Uma linha por item, separando prato principal, adicional e componente.",
@@ -935,7 +990,8 @@
     "Soma dos itens igual ao valor do pedido, com folga de valor de referência na issue do GitHub"
    ],
    "prompt": "Leia docs/regras-higienizacao.md, regras 2 e 5.\nCrie sql/02_staging/stg_item.sql conforme a ficha T13: classifique cada item como principal, adicional ou componente usando id_seq_ite_pri_ass e o preço.\nNão altere sql/tests/. Pronto quando test_stg_item.sql retornar 0 linhas.",
-   "branch": "feat/13-stg-item"
+   "branch": "feat/13-stg-item",
+   "ctx": "O GCOM grava três tipos de linha no mesmo lugar: o prato, o adicional pago e o ingrediente de preço zero. Sem separar isso, o ranking de mais vendidos fica errado."
   },
   "t14": {
    "obj": "Uma linha por pagamento, com forma e bandeira resolvidas.",
@@ -955,7 +1011,8 @@
     "Soma dos pagamentos igual ao valor do pedido"
    ],
    "prompt": "Leia GCOM_BASE_CONHECIMENTO.md, seção 9.1, sobre a chave polimórfica id_ban_cc.\nCrie sql/02_staging/stg_pagamento.sql conforme a ficha T14, com join condicionado a id_fma_pgt.\nNão altere sql/tests/. Pronto quando test_stg_pagamento.sql retornar 0 linhas.",
-   "branch": "feat/14-stg-pagamento"
+   "branch": "feat/14-stg-pagamento",
+   "ctx": "Onze por cento dos pedidos são pagos com mais de uma forma, e a bandeira do cartão fica numa chave que aponta para tabelas diferentes conforme a forma de pagamento."
   },
   "t15": {
    "obj": "Transformar as regras de higienização em consultas que acusam erro sozinhas.",
@@ -967,7 +1024,8 @@
     "Os números da janela conferem: 5.306 vendas e valor de referência na issue do GitHub"
    ],
    "prompt": "Para cada regra de docs/regras-higienizacao.md, escreva uma consulta SQL que retorne as linhas que violam a regra.\nO teste passa quando a consulta retorna 0 linhas. Uma consulta por arquivo, com um comentário no topo dizendo qual regra ela testa.",
-   "branch": "test/15-testes-staging"
+   "branch": "test/15-testes-staging",
+   "ctx": "Os testes são a rede de segurança do projeto e a regra combinada é que ninguém altera um teste para o código passar. Também é o que permite usar IA sem medo."
   },
   "t16": {
    "obj": "Produto com categoria correta e cancelamento classificado.",
@@ -987,7 +1045,8 @@
     "Nenhum produto vendido sem categoria",
     "Pelo menos 90% dos cancelamentos classificados"
    ],
-   "branch": "feat/16-stg-produto"
+   "branch": "feat/16-stg-produto",
+   "ctx": "A hierarquia de família do produto está quebrada na origem: as tabelas filhas não apontam para o pai. A categoria precisa vir das colunas do próprio produto."
   },
   "t17": {
    "obj": "Séries históricas de caixa, produção e iFood prontas para o modelo.",
@@ -1007,7 +1066,8 @@
     "Caixa diário desde fev/2023",
     "Tempos do iFood só com sequência válida e até 2 horas"
    ],
-   "branch": "feat/17-stg-operacao"
+   "branch": "feat/17-stg-operacao",
+   "ctx": "São as séries que sobreviveram ao expurgo e cobrem desde 2023: fechamento de caixa, tempo de produção e eventos do iFood. É o histórico mais rico que a loja tem."
   },
   "t18": {
    "obj": "Grupo recebe o banco limpo, documentado e testado.",
@@ -1018,7 +1078,8 @@
    "pronto": [
     "Todos os testes de sql/tests passam",
     "Backup compartilhado em pasta privada"
-   ]
+   ],
+   "ctx": "Marco da primeira parte. A partir daqui o grupo trabalha com dados limpos e testados, sem precisar entender as armadilhas do banco de origem."
   },
   "t19": {
    "obj": "Grupo alinhado, com ambiente rodando e primeiro commit feito.",
@@ -1029,7 +1090,8 @@
    "pronto": [
     "Cada pessoa roda uma consulta no banco limpo",
     "Cada pessoa abriu e teve aprovado um pull request"
-   ]
+   ],
+   "ctx": "Primeira semana do grupo no projeto. O objetivo é sair com todo mundo rodando consulta na própria máquina e com um pull request aprovado, por menor que seja."
   },
   "t20": {
    "obj": "Definir grão, fatos e dimensões antes de escrever qualquer SQL do modelo.",
@@ -1045,7 +1107,8 @@
     "Modelo aprovado em reunião do grupo"
    ],
    "prompt": "Leia docs/dicionario-dados.md e as views stg.\nProponha um modelo estrela para vendas de restaurante: liste os fatos com o grão de cada um e as dimensões, justificando cada escolha em uma linha.\nNão escreva o SQL ainda.",
-   "branch": "docs/20-modelo"
+   "branch": "docs/20-modelo",
+   "ctx": "Decidir grão, fatos e dimensões no papel antes de escrever SQL. Meia hora de conversa aqui economiza duas semanas de retrabalho depois."
   },
   "t21": {
    "obj": "Calendário e faixas de horário para todas as análises de tempo.",
@@ -1059,7 +1122,8 @@
     "Períodos do dia: manhã, almoço, tarde e jantar"
    ],
    "prompt": "Crie sql/03_dw/dim_data.sql para SQL Server, de 2023-01-01 a 2027-12-31, com: data, ano, mês, nome do mês, semana ISO, dia da semana, indicador de fim de semana, feriado nacional e feriado de Cuiabá.\nDepois crie dim_horario com hora cheia, faixa de 30 minutos e período do dia.",
-   "branch": "feat/21-dim-data"
+   "branch": "feat/21-dim-data",
+   "ctx": "O calendário é a dimensão mais usada de todas: sem ela não existe comparação com o ano anterior nem análise de feriado. Cuiabá tem feriados próprios que afetam o movimento."
   },
   "t22": {
    "obj": "Dimensões de produto, canal, forma de pagamento e status do pedido.",
@@ -1076,7 +1140,8 @@
     "Chave única em cada dimensão",
     "Membro Não informado com chave -1 em todas"
    ],
-   "branch": "feat/22-dimensoes"
+   "branch": "feat/22-dimensoes",
+   "ctx": "As dimensões dão nome aos códigos do banco. O membro Não informado com chave -1 evita perder vendas cujo produto ou canal não está cadastrado na loja."
   },
   "t23": {
    "obj": "Fatos de venda no grão certo, ligados às dimensões.",
@@ -1093,7 +1158,8 @@
     "Grão respeitado: um pedido, um item, um pagamento por linha"
    ],
    "prompt": "Leia docs/modelo-dimensional.md.\nCrie os scripts dos fatos conforme a ficha T23, buscando as chaves nas dimensões e usando -1 quando não houver cadastro.\nValores em DECIMAL(12,2). Não altere sql/tests/.",
-   "branch": "feat/23-fatos-venda"
+   "branch": "feat/23-fatos-venda",
+   "ctx": "São os fatos que sustentam quase todo o dashboard. O cuidado aqui é respeitar o grão definido no desenho e não deixar chave nula."
   },
   "t24": {
    "obj": "Fatos de caixa, produção e eventos do iFood.",
@@ -1107,7 +1173,8 @@
     "Caixa diário bate com caixa_encerrado",
     "Tempos de produção com a mesma média do staging"
    ],
-   "branch": "feat/24-fatos-operacao"
+   "branch": "feat/24-fatos-operacao",
+   "ctx": "Fatos que usam as séries históricas: caixa diário desde 2023, tempo de produção por linha e as etapas do pedido do iFood."
   },
   "t25": {
    "obj": "Carregar o modelo inteiro com um comando, e recarregar só os últimos dias no dia a dia.",
@@ -1120,7 +1187,8 @@
     "Log com início, fim e linhas afetadas"
    ],
    "prompt": "Escreva sql/03_dw/carga.sql com dois modos: completo e incremental dos últimos N dias.\nUse MERGE ou DELETE seguido de INSERT por período, garantindo que rodar duas vezes não duplique.\nRegistre início, fim e linhas afetadas numa tabela de log.",
-   "branch": "feat/25-carga-dw"
+   "branch": "feat/25-carga-dw",
+   "ctx": "Sem carga incremental, atualizar o dashboard significa recarregar três anos toda vez. Reprocessar os últimos sete dias cobre correções e cancelamentos que chegam atrasados."
   },
   "t26": {
    "obj": "Provar que o modelo bate com as fontes antes de abrir o dashboard.",
@@ -1133,7 +1201,8 @@
     "Nenhuma chave vazia nos fatos"
    ],
    "prompt": "Escreva consultas de reconciliação que comparem, mês a mês, o fato_pedido com caixa_encerrado e com log_done.\nCada consulta deve retornar 0 linhas quando a diferença for menor que 1%.",
-   "branch": "test/26-reconciliacao"
+   "branch": "test/26-reconciliacao",
+   "ctx": "Última prova antes de abrir o dashboard: o modelo precisa bater com o fechamento de caixa e com o log de vendas do banco."
   },
   "t27": {
    "obj": "Desenhar as páginas antes de construir, para não perder tempo no dashboard.",
@@ -1143,7 +1212,8 @@
    "pronto": [
     "Cada visual tem escrito qual pergunta responde",
     "Grupo aprovou os rascunhos"
-   ]
+   ],
+   "ctx": "Desenhar no papel antes de arrastar visual na ferramenta. Cada visual precisa responder a uma pergunta de P1 a P9; o que não responder nada fica de fora."
   },
   "t28": {
    "obj": "Dashboard conectado ao modelo, com relacionamentos e identidade visual.",
@@ -1158,7 +1228,8 @@
     "Modelo importado do dw",
     "Relacionamentos 1:N em uma direção só",
     "Tema aplicado em todas as páginas"
-   ]
+   ],
+   "ctx": "Importar o modelo do dw, ligar as tabelas e aplicar o tema. Relacionamento errado aqui aparece como número errado em todas as páginas."
   },
   "t29": {
    "obj": "Medidas oficiais, com nome e descrição, conferidas com SQL.",
@@ -1171,7 +1242,8 @@
     "Cada medida conferida com uma consulta SQL equivalente"
    ],
    "prompt": "Escreva as medidas DAX da ficha T29 para um modelo estrela com fato_pedido, fato_venda_item e dim_data.\nPara cada medida, dê o código e uma linha explicando o contexto de filtro.\nNão use colunas calculadas quando uma medida resolver.",
-   "branch": "feat/29-medidas"
+   "branch": "feat/29-medidas",
+   "ctx": "As medidas são o vocabulário do dashboard. Cada uma precisa bater com uma consulta SQL, senão o painel vira opinião."
   },
   "t30": {
    "obj": "Página que responde como foi ontem, a semana e o mês.",
@@ -1186,7 +1258,8 @@
     "Tendência das últimas 13 semanas",
     "Share do iFood e taxa de cancelamento",
     "Números batem com a consulta de validação"
-   ]
+   ],
+   "ctx": "Página que o franqueado abre todo dia: como foi ontem, a semana e o mês, com comparação contra o período anterior."
   },
   "t31": {
    "obj": "Página de evolução e sazonalidade das vendas.",
@@ -1198,7 +1271,8 @@
     "Comparação ano a ano pelo mesmo dia da semana",
     "Índice sazonal por mês",
     "Números batem com a consulta de validação"
-   ]
+   ],
+   "ctx": "Responde P1, P5 e P7. É onde o histórico de três anos aparece e onde dá para ver que fevereiro é sempre o mês mais fraco."
   },
   "t32": {
    "obj": "Página do cardápio: o que vende, o que cai e o que se vende junto.",
@@ -1209,7 +1283,8 @@
     "Mix e curva ABC por produto e categoria",
     "Lista de produtos em queda",
     "Attach rate e ingredientes mais escolhidos"
-   ]
+   ],
+   "ctx": "Responde P2, P3 e P8. Mostra o que vende, o que está caindo e o que sai junto, incluindo os ingredientes mais escolhidos no monte seu prato."
   },
   "t33": {
    "obj": "Página de canais, com a operação do iFood.",
@@ -1220,7 +1295,8 @@
     "Share e ticket por canal",
     "Tempos de aceite, preparo, espera e entrega",
     "Taxa de cancelamento por canal"
-   ]
+   ],
+   "ctx": "Responde P9. Compara salão e iFood em volume, ticket e tempo, usando a trilha de eventos que o GCOM guarda desde 2023."
   },
   "t34": {
    "obj": "Página da operação: onde o pico aperta.",
@@ -1231,7 +1307,8 @@
     "Mapa de calor por dia da semana e hora",
     "Pico de 15 minutos",
     "Tempo de preparo por linha de produção"
-   ]
+   ],
+   "ctx": "Responde P4. Mapa de calor por dia e hora, pico de quinze minutos e tempo de preparo por linha: é a página que ajuda a montar escala."
   },
   "t35": {
    "obj": "Página de pagamentos e conferência de caixa.",
@@ -1242,7 +1319,8 @@
     "Mix de pagamento e bandeiras",
     "Quebra de caixa por dia",
     "Cashback resgatado"
-   ]
+   ],
+   "ctx": "Fecha o ciclo do dinheiro: formas de pagamento, bandeiras, quebra de caixa e cashback resgatado."
   },
   "t36": {
    "obj": "Colocar o dashboard no ar para o grupo e o professor.",
@@ -1253,7 +1331,8 @@
    "pronto": [
     "O link abre fora da rede do grupo",
     "Link registrado no README"
-   ]
+   ],
+   "ctx": "Colocar no ar é entregável da disciplina. O link precisa abrir fora da rede do grupo, no celular de qualquer pessoa."
   },
   "t37": {
    "obj": "Ver o dashboard sendo usado por quem conhece a loja.",
@@ -1264,14 +1343,16 @@
    "pronto": [
     "O franqueado responde as perguntas P1 a P9 sozinho",
     "Cada problema virou uma issue com prioridade"
-   ]
+   ],
+   "ctx": "Validar com quem conhece a loja é o que separa um trabalho bonito de um trabalho útil. O teste é simples: o franqueado responde as perguntas P1 a P9 sozinho, sem ninguém explicando."
   },
   "t38": {
    "obj": "Fechar o que a validação apontou.",
    "pronto": [
     "Nenhuma issue crítica aberta",
     "Correções revisadas por outra pessoa"
-   ]
+   ],
+   "ctx": "Corrigir o que a validação apontou, priorizando o que impede alguém de responder uma pergunta."
   },
   "t39": {
    "obj": "Documentação que permite outra pessoa montar o projeto do zero.",
@@ -1283,7 +1364,8 @@
    "pronto": [
     "Alguém de fora consegue montar o ambiente seguindo o README",
     "Cada página do dashboard tem um parágrafo de como usar"
-   ]
+   ],
+   "ctx": "Documentação é nota na disciplina e é o que permite outra pessoa montar o projeto do zero. O teste é entregar o README para alguém de fora seguir."
   },
   "t40": {
    "obj": "Primeira versão completa do relatório acadêmico.",
@@ -1293,7 +1375,8 @@
    "pronto": [
     "Todas as seções escritas: problema, metodologia, arquitetura, higienização, modelo, resultados, uso de IA e limitações",
     "Cada pessoa escreveu a parte da sua frente"
-   ]
+   ],
+   "ctx": "O relatório é escrito em cima do que já foi feito: cada pessoa escreve a parte da frente que conduziu, com print e número real."
   },
   "t41": {
    "obj": "Relatório final revisado e formatado.",
@@ -1303,7 +1386,8 @@
    "pronto": [
     "Revisão cruzada feita",
     "Referências e figuras conferidas"
-   ]
+   ],
+   "ctx": "Revisão cruzada: ninguém revisa o próprio texto. Formatação e referências conferidas antes de gerar o PDF."
   },
   "t42": {
    "obj": "Apresentação com demonstração ao vivo.",
@@ -1314,7 +1398,8 @@
    "pronto": [
     "Demonstração ensaiada em menos de 10 minutos",
     "Cada pessoa sabe a parte que vai falar"
-   ]
+   ],
+   "ctx": "A banca vê a demonstração ao vivo. Ensaiar é o que evita descobrir na hora que o filtro da página trava."
   },
   "t43": {
    "obj": "Fechar o projeto no GitHub com tudo anexado.",
@@ -1324,8 +1409,84 @@
    "pronto": [
     "Relatório, slides e link do dashboard anexados",
     "Retrospectiva registrada em docs/semanas/"
-   ]
+   ],
+   "ctx": "Fechar o projeto no GitHub com tudo anexado é o que transforma o repositório em portfólio para os cinco."
   }
  },
+ "repo": "https://github.com/AlexandreBicudo/bi-spoleto",
+ "glossario": [
+  {
+   "t": "P1 a P11",
+   "d": "As perguntas de negócio que o BI precisa responder. P1 evolução do faturamento por dia, semana e mês. P2 produtos mais vendidos em quantidade e em valor. P3 produtos em queda. P4 horários e dias de maior movimento. P5 sazonalidade ao longo do ano. P6 ticket médio por período, horário e canal. P7 comparação com o período anterior, mês contra mês e ano contra ano. P8 participação de cada categoria. P9 desempenho de cada canal, salão e iFood. P10 padrões de consumo com dados anonimizados. P11 comparação com outras unidades, fora do escopo deste semestre."
+  },
+  {
+   "t": "raw",
+   "d": "Schema com a cópia fiel das fontes, sem tratamento. Serve para reprocessar tudo se uma regra mudar."
+  },
+  {
+   "t": "stg (staging)",
+   "d": "Schema com os dados já limpos: datas convertidas, valores arredondados, canal resolvido, venda válida marcada. É onde mora a higienização."
+  },
+  {
+   "t": "dw",
+   "d": "Schema do modelo final, em estrela, que o dashboard lê. Tem dimensões e fatos."
+  },
+  {
+   "t": "view",
+   "d": "Consulta salva no banco que se comporta como uma tabela. Não guarda dados, monta o resultado na hora."
+  },
+  {
+   "t": "fato e dimensão",
+   "d": "Fato guarda os números do que aconteceu, como um pedido ou um item vendido. Dimensão guarda o contexto para filtrar e agrupar: data, produto, canal, forma de pagamento."
+  },
+  {
+   "t": "grão",
+   "d": "O que representa uma linha da tabela. Em fato_pedido o grão é um pedido; em fato_venda_item é um item de um pedido. Errar o grão é o erro mais caro do projeto."
+  },
+  {
+   "t": "modelo estrela",
+   "d": "Um fato no centro, ligado a várias dimensões. É o formato que o Power BI e o Looker Studio entendem melhor."
+  },
+  {
+   "t": "venda válida",
+   "d": "Venda com ic_tip_ope igual a V e sem registro em venda_direta_cancelada. Só essas entram no faturamento."
+  },
+  {
+   "t": "expurgo",
+   "d": "O GCOM apaga do banco as vendas com mais de 60 dias e guarda em JSON. Por isso o histórico vem do bkp_vendas.zip."
+  },
+  {
+   "t": "de-para",
+   "d": "Tabela que traduz valores bagunçados da origem para categorias padronizadas, como os motivos de cancelamento digitados à mão."
+  },
+  {
+   "t": "idempotente",
+   "d": "Processo que pode rodar duas vezes sem duplicar nada. Vale para toda carga do projeto."
+  },
+  {
+   "t": "reconciliação",
+   "d": "Conferir se o número do modelo bate com a fonte. Exemplo: faturamento do fato contra o fechamento de caixa."
+  },
+  {
+   "t": "attach rate",
+   "d": "Percentual de pedidos que levam junto um item adicional, como bebida ou sobremesa."
+  },
+  {
+   "t": "ticket médio",
+   "d": "Faturamento dividido pelo número de pedidos. Sempre calculado no grão do pedido, nunca do item."
+  },
+  {
+   "t": "makeline",
+   "d": "A linha de produção da cozinha. O GCOM grava o tempo de cada fase por item, o que permite medir preparo e gargalos."
+  },
+  {
+   "t": "issue, branch e pull request",
+   "d": "Issue é a tarefa no GitHub. Branch é a cópia de trabalho onde você escreve o código. Pull request é o pedido de revisão para juntar seu trabalho na main."
+  },
+  {
+   "t": "trilha A e trilha B",
+   "d": "Trilha A: você escreve e a IA revisa. Trilha B: a IA escreve a partir da ficha e você confere contra os testes. As duas passam por revisão humana."
+  }
+ ],
  "publico": true
 }
