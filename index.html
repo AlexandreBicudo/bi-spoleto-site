@@ -163,6 +163,11 @@ dialog::backdrop{background:rgba(10,12,16,.5)}
 @media (max-width:520px){.dlg-grid{grid-template-columns:1fr}}
 .dlg-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;font-size:.84rem;z-index:30;max-width:calc(100vw - 32px);text-align:center}
+
+.t-info{display:grid;gap:2px;align-content:start}
+.t-info-l{font:600 .64rem/1.2 var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.t-info-v{font-weight:600;font-size:.86rem;color:var(--ink)}
+.task.unassigned .t-info-v{color:var(--warn)}
 </style>
 </head>
 <body>
@@ -305,7 +310,7 @@ function renderBar(){
     [["todos", "Todas as pessoas"], ["__sem", "Sem responsável"], ...state.pessoas.map(p => [p, p])].map(([v, l]) => h("option", { value: v, selected: ui.filtro === v }, l)));
   return h("div", { class: "bar" },
     h("div", { class: "bar-group" },
-      h("label", { class: "field", for: "inicio" }, "Início da S1", inicio),
+      h("span", { class: "field" }, "Início da S1: " + dmy(parseISO(state.inicio))),
       h("label", { class: "field", for: "filtro" }, "Mostrar", filtro),
       h("button", { class: "btn ghost", type: "button", onclick: () => { state.sprints.forEach(s => ui.open.add(s.n)); render(); } }, "Abrir todas"),
       h("button", { class: "btn ghost", type: "button", onclick: () => { ui.open.clear(); render(); } }, "Fechar todas")
@@ -586,10 +591,10 @@ function renderTask(t){
   );
 }
 function selectField(t, field, label, opts){
-  const id = field + "-" + t.id;
-  const sel = h("select", { class: "ctl", id, "data-field": field, disabled: readOnly(), onchange: e => { t[field] = e.target.value; change(id); } },
-    opts.map(([v, l]) => h("option", { value: v, selected: (t[field] || "") === v }, l)));
-  return h("label", { for: id }, label, sel);
+  const atual = opts.find(o => o[0] === (t[field] || ""));
+  return h("div", { class: "t-info" },
+    h("span", { class: "t-info-l", text: label }),
+    h("span", { class: "t-info-v", text: atual ? atual[1] : "—" }));
 }
 
 function setSprint(n, status){
