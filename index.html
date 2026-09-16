@@ -18,7 +18,6 @@
   --accent:#1c5cab; --accent-soft:#e8eef8; --on-accent:#ffffff;
   --good:#006300; --good-soft:#e3f1e3;
   --warn:#8a5a00; --warn-soft:#fbf0d9;
-  --wa:#0f7a45; --on-wa:#ffffff;
   --font-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --font-body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;
   --font-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
@@ -32,7 +31,6 @@
     --accent:#86b6ef; --accent-soft:#1d2b40; --on-accent:#0f1216;
     --good:#4cc24c; --good-soft:#17301a;
     --warn:#e8b54a; --warn-soft:#3a2c10;
-    --wa:#3fc07a; --on-wa:#0f1216;
   }
 }
 :root[data-theme="dark"]{
@@ -43,7 +41,6 @@
   --accent:#86b6ef; --accent-soft:#1d2b40; --on-accent:#0f1216;
   --good:#4cc24c; --good-soft:#17301a;
   --warn:#e8b54a; --warn-soft:#3a2c10;
-  --wa:#3fc07a; --on-wa:#0f1216;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -68,7 +65,7 @@ button,select,input,textarea{font:inherit;color:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;border:1px solid var(--rule-strong);background:var(--surface);padding:7px 14px;font-weight:600;font-size:.84rem;line-height:1.2;cursor:pointer;text-decoration:none;color:var(--ink);white-space:nowrap}
 .btn:hover{border-color:var(--ink-2)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
-.btn.wa{background:var(--wa);border-color:var(--wa);color:var(--on-wa)}
+.btn.small{padding:5px 11px;font-size:.78rem}
 .btn.ghost{border-color:transparent;background:transparent;color:var(--accent);padding:4px 8px;font-weight:600}
 .btn.ghost:hover{background:var(--accent-soft)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
@@ -365,8 +362,9 @@ function renderSprint(sp, cur){
         h("span", { class: "chip", text: feitas + "/" + ts.length + " feitas" })
       ),
       h("div", { class: "s-actions" },
-        h("button", { class: "btn wa", type: "button", id: "wa-" + sp.n, onclick: () => openMessage(sp.n) }, sp.status === "planejada" && !readOnly() ? "Iniciar e avisar no WhatsApp" : "Mensagem no WhatsApp"),
-        sp.status === "em_andamento" ? h("button", { class: "btn", type: "button", disabled: readOnly(), onclick: () => setSprint(sp.n, "concluida") }, "Concluir") : null,
+        h("button", { class: "btn small", type: "button", id: "msg-" + sp.n, onclick: () => openMessage(sp.n) }, "Copiar mensagem"),
+        sp.status === "planejada" && !readOnly() ? h("button", { class: "btn small primary", type: "button", onclick: () => setSprint(sp.n, "em_andamento") }, "Iniciar sprint") : null,
+        sp.status === "em_andamento" ? h("button", { class: "btn small", type: "button", disabled: readOnly(), onclick: () => setSprint(sp.n, "concluida") }, "Concluir") : null,
         sp.status === "concluida" ? h("button", { class: "btn ghost", type: "button", disabled: readOnly(), onclick: () => setSprint(sp.n, "em_andamento") }, "Reabrir") : null
       )
     ),
@@ -563,7 +561,6 @@ function buildMessage(n){
   L.push("", "Entrega na sexta, " + dm(r.e) + ".");
   return L.join("\n");
 }
-const waUrl = text => "https://wa.me/?text=" + encodeURIComponent(text);
 
 function openMessage(n){
   const dlg = document.getElementById("dlg-msg"), sp = state.sprints[n - 1];
@@ -572,21 +569,15 @@ function openMessage(n){
   dlg.dataset.sprint = String(n);
   document.getElementById("msg-title").textContent = "Mensagem da S" + n;
   document.getElementById("msg-text").value = txt;
-  document.getElementById("msg-wa").href = waUrl(txt);
   document.getElementById("msg-note").textContent =
-    (sp.status === "planejada" && !readOnly() ? "Ao abrir o WhatsApp, a S" + n + " fica marcada como iniciada e o controle é salvo. " : "")
-    + "Revise o texto: o WhatsApp abre com a mensagem pronta para você escolher o grupo e enviar."
+    "Revise ou edite o texto e copie para colar no grupo."
+    + (sp.status === "planejada" && !readOnly() ? " Depois de avisar o grupo, use o botão Iniciar sprint para marcar a S" + n + " como em andamento." : "")
     + (semResp ? " Atenção: " + semResp + (semResp > 1 ? " tarefas estão" : " tarefa está") + " sem responsável." : "");
   dlg.showModal();
+  document.getElementById("msg-copy").focus();
 }
-async function copyMessage(){
-  const ta = document.getElementById("msg-text");
-  try { await navigator.clipboard.writeText(ta.value); toast("Mensagem copiada."); }
-  catch (e){
-    ta.focus(); ta.select();
-    let ok = false; try { ok = document.execCommand("copy"); } catch (_){ ok = false; }
-    toast(ok ? "Mensagem copiada." : "Texto selecionado: use Ctrl+C para copiar.");
-  }
+function copyMessage(){
+  copiar(document.getElementById("msg-text").value, "Mensagem copiada. Cole no grupo do WhatsApp.");
 }
 
 function fillOptions(sel, opts, value){ sel.replaceChildren(...opts.map(([v, l]) => h("option", { value: v }, l))); sel.value = value; }
@@ -625,7 +616,6 @@ function submitTask(){
 
 function setupDialogs(){
   const msgText = h("textarea", { class: "ctl", id: "msg-text", "aria-label": "Texto da mensagem" });
-  const waLink = h("a", { class: "btn wa", id: "msg-wa", href: "https://wa.me/", target: "_blank", rel: "noopener" }, "Abrir no WhatsApp");
   const dlgMsg = h("dialog", { id: "dlg-msg", "aria-labelledby": "msg-title" },
     h("div", { class: "dlg" },
       h("h2", { id: "msg-title", text: "Mensagem da sprint" }),
@@ -633,19 +623,10 @@ function setupDialogs(){
       msgText,
       h("div", { class: "dlg-actions" },
         h("button", { class: "btn", type: "button", onclick: () => dlgMsg.close() }, "Fechar"),
-        h("button", { class: "btn", type: "button", id: "msg-copy", onclick: copyMessage }, "Copiar texto"),
-        waLink
+        h("button", { class: "btn primary", type: "button", id: "msg-copy", onclick: copyMessage }, "Copiar mensagem")
       )
     )
   );
-  msgText.addEventListener("input", () => { waLink.href = waUrl(msgText.value); });
-  waLink.addEventListener("click", () => {
-    const n = Number(dlgMsg.dataset.sprint), sp = state.sprints[n - 1];
-    if (sp && sp.status === "planejada" && !readOnly()){
-      setSprint(n, "em_andamento");
-      setTimeout(() => { dlgMsg.close(); save(); }, 700);
-    } else setTimeout(() => dlgMsg.close(), 300);
-  });
 
   const dlgTask = h("dialog", { id: "dlg-task", "aria-labelledby": "task-title" },
     h("form", { class: "dlg", onsubmit: e => { e.preventDefault(); submitTask(); } },
