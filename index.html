@@ -138,6 +138,10 @@ details.cmds{margin-top:10px;border-top:1px solid var(--rule);padding-top:10px}
 details.cmds summary{cursor:pointer;font-weight:600;font-size:.88rem;color:var(--accent)}
 .cmds-body{display:grid;gap:8px;margin-top:8px;justify-items:start}
 .cmds-body pre{width:100%}
+ol.gitsteps{display:grid;gap:10px;padding-left:1.3em;margin:0}
+ol.gitsteps li{font-size:.86rem;color:var(--ink-2)}
+ol.gitsteps b{display:block;font:500 .84rem/1.5 var(--font-mono);color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:6px 9px;margin-bottom:4px;overflow-wrap:anywhere}
+ol.gitsteps em{font-style:normal;color:var(--muted)}
 .gloss{display:grid;gap:10px;margin:0}
 .gloss dt{font-weight:600;color:var(--ink);font-size:.86rem}
 .gloss dd{margin:2px 0 0;font-size:.86rem;color:var(--ink-2)}
@@ -272,6 +276,7 @@ function render(){
       h("p", { class: "lede", text: "Controle das 13 sprints semanais, de segunda a sexta. Escolha quem faz cada tarefa, acompanhe o andamento e avise o grupo no WhatsApp quando uma sprint começar." })
     ),
     renderAjuda(),
+    renderGitAjuda(),
     renderGlossario(),
     renderBar(),
     h("div", { class: "stats" },
@@ -377,6 +382,7 @@ function renderSprint(sp, cur){
         sp.iniciadaEm ? h("p", null, h("b", { text: "Iniciada em: " }), dmy(parseISO(sp.iniciadaEm))) : null,
         fer.map(f => h("p", null, h("b", { text: "Feriado: " }), dmy(parseISO(f.data)) + " · " + f.nome))
       ),
+      renderComecar(sp),
       vis.map(renderTask),
       vis.length === 0 ? h("p", { class: "note", text: ts.length ? "Nenhuma tarefa desta sprint para o filtro escolhido." : "Nenhuma tarefa nesta sprint." }) : null,
       renderComandosSprint(sp, ts),
@@ -434,13 +440,67 @@ function comandosDaTarefa(t, f){
   if (!f.branch) return null;
   const tipo = f.branch.split("/")[0];
   const titulo = t.titulo.charAt(0).toLowerCase() + t.titulo.slice(1);
-  return ["git checkout main && git pull",
+  return ["# 1. Pegue a versão mais nova do projeto",
+    "git checkout main",
+    "git pull",
+    "",
+    "# 2. Crie a sua cópia de trabalho (branch) para esta tarefa",
     "git checkout -b " + f.branch,
-    "# faça a tarefa e rode os testes de sql/tests",
+    "",
+    "# 3. Faça a tarefa e rode os testes de sql/tests",
+    "",
+    "# 4. Guarde o que você fez",
     "git add .",
     "git commit -m \"" + tipo + ": " + titulo + "\"",
+    "",
+    "# 5. Envie para o GitHub",
     "git push -u origin " + f.branch,
+    "",
+    "# 6. Peça a revisão. O Closes fecha a issue #" + t.issue + " quando alguém aprovar",
     "gh pr create --fill --base main --body \"Closes #" + t.issue + "\""].join("\n");
+}
+
+function passo(cmd, texto){ return h("li", null, h("b", { text: cmd }), h("em", { text: texto })); }
+
+function renderGitAjuda(){
+  const repo = (state.repo || "") + ".git";
+  return h("details", { class: "ajuda" },
+    h("summary", { text: "Git do zero: como copiar o projeto e enviar o seu trabalho" }),
+    h("div", { class: "ajuda-body" },
+      h("p", { text: "Git guarda o histórico do projeto e junta o trabalho de todo mundo sem ninguém sobrescrever ninguém. Use o Git Bash no Windows ou o Terminal no Mac. Os comandos abaixo são digitados dentro da pasta do projeto." }),
+      h("h4", { text: "Só na primeira vez, em cada computador" }),
+      h("ol", { class: "gitsteps" },
+        passo("git config --global user.name \"Seu Nome\"", "Diz ao Git quem é você; aparece no histórico."),
+        passo("git config --global user.email \"seu@email.com\"", "Use o mesmo e-mail da sua conta do GitHub."),
+        passo("gh auth login", "Conecta o computador à sua conta do GitHub. Escolha GitHub.com, HTTPS e autenticar pelo navegador."),
+        passo("git clone " + repo, "Baixa o projeto inteiro para o computador. Faça isso dentro da pasta onde quer guardar."),
+        passo("cd bi-spoleto", "Entra na pasta do projeto. Todos os comandos seguintes são dados aqui dentro.")
+      ),
+      h("h4", { text: "Erros comuns" }),
+      h("ul", null,
+        h("li", { text: "fatal: not a git repository — você não está dentro da pasta do projeto. Use cd para entrar nela." }),
+        h("li", { text: "Your branch is behind — alguém enviou algo novo. Rode git pull." }),
+        h("li", { text: "Permission denied ou pedido de senha — rode gh auth login de novo." }),
+        h("li", { text: "CONFLICT (merge conflict) — duas pessoas mexeram na mesma linha. Não tente adivinhar: avise no grupo." })
+      )
+    )
+  );
+}
+
+function renderComecar(sp){
+  return h("details", { class: "cmds" },
+    h("summary", { text: "Antes de começar a S" + sp.n + ": pegar a versão atualizada do projeto" }),
+    h("div", { class: "cmds-body" },
+      h("p", { class: "note", text: "Faça isso no primeiro dia da sprint e sempre que voltar a trabalhar. Assim você começa com tudo que os colegas já enviaram." }),
+      h("ol", { class: "gitsteps" },
+        passo("cd bi-spoleto", "Entra na pasta do projeto. Se ainda não tem o projeto, veja Git do zero no topo da página."),
+        passo("git checkout main", "Volta para a versão principal, a que todo mundo compartilha."),
+        passo("git pull", "Baixa as novidades do GitHub para o seu computador."),
+        passo("git status", "Confere se está tudo limpo. Se aparecer arquivo modificado que você não reconhece, avise no grupo antes de continuar.")
+      ),
+      h("button", { class: "btn ghost", type: "button", onclick: () => copiar("cd bi-spoleto\ngit checkout main\ngit pull\ngit status", "Comandos copiados.") }, "Copiar os quatro comandos")
+    )
+  );
 }
 
 function renderComandosSprint(sp, ts){
