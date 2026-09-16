@@ -196,7 +196,7 @@ function h(tag, attrs, ...kids){
     else if (k.slice(0, 2) === "on") el.addEventListener(k.slice(2), v);
     else el.setAttribute(k, v === true ? "" : String(v));
   }
-  for (const kid of kids.flat()){
+  for (const kid of kids.flat(Infinity)){
     if (kid == null || kid === false) continue;
     el.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
   }
