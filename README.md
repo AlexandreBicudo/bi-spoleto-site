@@ -2,7 +2,6 @@
 
 Quadro público das sprints do Projeto Integrador de BI, somente leitura.
 
-- Controle editável (só Alexandre): https://claude.ai/artifact/43CT6XaHZCToqfzSAioFSr
 - Repositório do projeto (privado): https://github.com/AlexandreBicudo/bi-spoleto
 
 ## Como atualizar
