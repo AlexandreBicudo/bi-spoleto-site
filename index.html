@@ -311,7 +311,6 @@ function renderBar(){
   return h("div", { class: "bar" },
     h("div", { class: "bar-group" },
       h("span", { class: "field" }, "Início da S1: " + dmy(parseISO(state.inicio))),
-      h("label", { class: "field", for: "filtro" }, "Mostrar", filtro),
       h("button", { class: "btn ghost", type: "button", onclick: () => { state.sprints.forEach(s => ui.open.add(s.n)); render(); } }, "Abrir todas"),
       h("button", { class: "btn ghost", type: "button", onclick: () => { ui.open.clear(); render(); } }, "Fechar todas")
     ),
