@@ -1,0 +1,819 @@
+{
+ "versao": 1,
+ "inicio": "2026-10-26",
+ "pessoas": [
+  "Alexandre",
+  "Igor",
+  "Daniel",
+  "João",
+  "Adriano"
+ ],
+ "feriados": [
+  {
+   "data": "2026-11-02",
+   "nome": "Finados"
+  },
+  {
+   "data": "2026-11-20",
+   "nome": "Consciência Negra"
+  }
+ ],
+ "partes": [
+  {
+   "n": 1,
+   "titulo": "Projeto Integrador Univag — Spoleto",
+   "descricao": "Modelagem dimensional, dashboard, validação e entrega. O banco de dados (SPOLETO_BI) já vem limpo e pronto."
+  }
+ ],
+ "sprints": [
+  {
+   "n": 0,
+   "parte": 1,
+   "fase": "Preparação",
+   "objetivo": "Banco de dados exportado e disponibilizado para o grupo",
+   "entrega": "Banco SPOLETO_BI pronto (banco e JSON) para iniciar a modelagem na Sprint 1",
+   "marco": "",
+   "status": "concluida",
+   "iniciadaEm": "2026-09-19",
+   "concluidaEm": "2026-09-19"
+  },
+  {
+   "n": 1,
+   "parte": 1,
+   "fase": "Modelagem",
+   "objetivo": "Grupo no projeto e desenho do modelo estrela",
+   "entrega": "Ambiente de todos, modelo desenhado e primeiras dimensões",
+   "marco": "",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  },
+  {
+   "n": 2,
+   "parte": 1,
+   "fase": "Modelagem",
+   "objetivo": "Fatos reconciliados e wireframes aprovados",
+   "entrega": "Modelo estrela completo com testes e rascunho das páginas",
+   "marco": "M1 Modelo estrela",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  },
+  {
+   "n": 3,
+   "parte": 1,
+   "fase": "Dashboard",
+   "objetivo": "Dashboard conectado e primeiras páginas",
+   "entrega": "Conexão, medidas base, Visão geral e Vendas e sazonalidade",
+   "marco": "",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  },
+  {
+   "n": 4,
+   "parte": 1,
+   "fase": "Dashboard",
+   "objetivo": "Todas as páginas prontas",
+   "entrega": "Cardápio, Canais, Operação e Pagamentos",
+   "marco": "",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  },
+  {
+   "n": 5,
+   "parte": 1,
+   "fase": "Validação e documentação",
+   "objetivo": "Projeto pronto até o fim de novembro",
+   "entrega": "Dashboard publicado, validado, corrigido e documentado, com rascunho do relatório",
+   "marco": "M2 Projeto pronto",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  },
+  {
+   "n": 6,
+   "parte": 1,
+   "fase": "Entrega",
+   "objetivo": "Etapa final",
+   "entrega": "Relatório final, apresentação e release v1.0",
+   "marco": "M3 Entrega final",
+   "status": "planejada",
+   "iniciadaEm": null,
+   "concluidaEm": null
+  }
+ ],
+ "tarefas": [
+  {
+   "id": "t00",
+   "sprint": 0,
+   "titulo": "Preparar e disponibilizar o banco de dados do projeto",
+   "passos": [
+    "Banco de dados de origem acessado",
+    "Dados analisados",
+    "Dados extraídos",
+    "Dados estruturados num banco novo, mais simples",
+    "Banco novo disponibilizado ao grupo"
+   ],
+   "responsavel": "Alexandre",
+   "revisao": "",
+   "status": "feito",
+   "issue": null
+  },
+  {
+   "id": "t01",
+   "sprint": 1,
+   "titulo": "Kickoff e ambiente do grupo",
+   "passos": [
+    "Apresentar o projeto e as regras de trabalho",
+    "Cada pessoa instala SQL Server e SSMS ou DBeaver e restaura o banco SPOLETO_BI",
+    "Autoavaliação em SQL, Python, dashboard e Git",
+    "Primeiro pull request de cada pessoa"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 1
+  },
+  {
+   "id": "t02",
+   "sprint": 1,
+   "titulo": "Desenhar o modelo estrela",
+   "passos": [
+    "Definir o grão de cada fato",
+    "Listar dimensões e chaves",
+    "Validar em reunião e documentar em docs/modelo-dimensional.md"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 2
+  },
+  {
+   "id": "t03",
+   "sprint": 1,
+   "titulo": "Scripts dim_data e dim_horario",
+   "passos": [
+    "Calendário com feriados nacionais e de Cuiabá",
+    "Períodos do dia",
+    "Teste de datas sem lacunas"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 3
+  },
+  {
+   "id": "t04",
+   "sprint": 1,
+   "titulo": "Scripts dim_produto, dim_canal, dim_forma_pagamento e dim_status_pedido",
+   "passos": [
+    "Construir a partir das as tabelas prontas (pedido, item_pedido, pagamento, produto, caixa_diario, producao, evento_pedido_ifood)",
+    "Membro “Não informado” com chave -1",
+    "Teste de chave única"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 4
+  },
+  {
+   "id": "t05",
+   "sprint": 2,
+   "titulo": "Scripts fato_pedido, fato_venda_item e fato_pagamento",
+   "passos": [
+    "Seguir o grão definido no desenho",
+    "Ligar as chaves das dimensões",
+    "Valores em DECIMAL"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 5
+  },
+  {
+   "id": "t06",
+   "sprint": 2,
+   "titulo": "Scripts fato_caixa_diario, fato_producao e fato_evento_pedido_online",
+   "passos": [
+    "Fechamento diário por forma de pagamento",
+    "Tempos de produção por linha",
+    "Etapas do pedido iFood"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 6
+  },
+  {
+   "id": "t07",
+   "sprint": 2,
+   "titulo": "Script de carga completa e incremental",
+   "passos": [
+    "Carregar dimensões antes dos fatos",
+    "Reprocessar os últimos 7 dias",
+    "Registrar log de execução"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 7
+  },
+  {
+   "id": "t08",
+   "sprint": 2,
+   "titulo": "Testes de reconciliação",
+   "passos": [
+    "Faturamento mensal × fechamento de caixa, diferença de até 1%",
+    "Pedidos por mês × log do banco",
+    "Nenhuma chave vazia nos fatos"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 8
+  },
+  {
+   "id": "t09",
+   "sprint": 2,
+   "titulo": "Wireframes das páginas",
+   "passos": [
+    "Um rascunho por página",
+    "Qual pergunta cada visual responde",
+    "Aprovar com o grupo"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 9
+  },
+  {
+   "id": "t10",
+   "sprint": 3,
+   "titulo": "Conexão, relacionamentos e tema",
+   "passos": [
+    "Conectar ao schema dw",
+    "Relacionamentos 1:N",
+    "Tema com cores e fontes"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 10
+  },
+  {
+   "id": "t11",
+   "sprint": 3,
+   "titulo": "Medidas base",
+   "passos": [
+    "Faturamento Líquido, Pedidos, Ticket Médio e Itens por Pedido",
+    "Ano anterior, variação YoY e MoM",
+    "Share do canal, attach rate, cancelamento e tempo de preparo",
+    "Documentar em docs/medidas.md"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 11
+  },
+  {
+   "id": "t12",
+   "sprint": 3,
+   "titulo": "Página Visão geral",
+   "passos": [
+    "Faturamento, pedidos e ticket vs período anterior",
+    "Tendência das últimas 13 semanas",
+    "Share do iFood e taxa de cancelamento"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 12
+  },
+  {
+   "id": "t13",
+   "sprint": 3,
+   "titulo": "Página Vendas e sazonalidade",
+   "passos": [
+    "Série diária, semanal e mensal",
+    "Comparação ano a ano pelo mesmo dia da semana",
+    "Índice sazonal e feriados"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 13
+  },
+  {
+   "id": "t14",
+   "sprint": 4,
+   "titulo": "Página Cardápio",
+   "passos": [
+    "Mix e curva ABC",
+    "Produtos em queda",
+    "Attach rate e ingredientes mais escolhidos"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 14
+  },
+  {
+   "id": "t15",
+   "sprint": 4,
+   "titulo": "Página Canais e iFood",
+   "passos": [
+    "Share e ticket por canal",
+    "Tempos do pedido iFood",
+    "Cancelamentos por canal"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 15
+  },
+  {
+   "id": "t16",
+   "sprint": 4,
+   "titulo": "Página Operação e cozinha",
+   "passos": [
+    "Mapa de calor por dia e hora",
+    "Pico de 15 minutos",
+    "Tempo de preparo por linha de produção"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 16
+  },
+  {
+   "id": "t17",
+   "sprint": 4,
+   "titulo": "Página Pagamentos e caixa",
+   "passos": [
+    "Mix de pagamento e bandeiras",
+    "Quebra de caixa",
+    "Cashback resgatado"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 17
+  },
+  {
+   "id": "t18",
+   "sprint": 5,
+   "titulo": "Publicar a versão beta",
+   "passos": [
+    "Salvar em formato versionável (.pbip no Power BI)",
+    "Publicar e testar o link fora da rede do grupo",
+    "Registrar o link no README"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 18
+  },
+  {
+   "id": "t19",
+   "sprint": 5,
+   "titulo": "Sessão de validação com o franqueado",
+   "passos": [
+    "Roteiro com as perguntas P1 a P9",
+    "Registrar cada problema como issue"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 19
+  },
+  {
+   "id": "t20",
+   "sprint": 5,
+   "titulo": "Corrigir os problemas da validação",
+   "passos": [
+    "Priorizar as issues abertas",
+    "Corrigir e revisar cada uma"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 20
+  },
+  {
+   "id": "t21",
+   "sprint": 5,
+   "titulo": "Documentação técnica",
+   "passos": [
+    "README final",
+    "Arquitetura, dicionário, regras e modelo",
+    "Manual de uso das páginas"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 21
+  },
+  {
+   "id": "t22",
+   "sprint": 5,
+   "titulo": "Rascunho do relatório escrito",
+   "passos": [
+    "Estrutura: problema, metodologia, arquitetura, higienização, modelo, resultados, uso de IA e limitações",
+    "Cada responsável escreve a parte da sua frente"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 22
+  },
+  {
+   "id": "t23",
+   "sprint": 6,
+   "titulo": "Relatório final",
+   "passos": [
+    "Revisão cruzada do texto",
+    "Exportar em PDF"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 23
+  },
+  {
+   "id": "t24",
+   "sprint": 6,
+   "titulo": "Apresentação",
+   "passos": [
+    "Slides",
+    "Roteiro da demonstração ao vivo",
+    "Ensaio com o grupo"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 24
+  },
+  {
+   "id": "t25",
+   "sprint": 6,
+   "titulo": "Release v1.0 no GitHub",
+   "passos": [
+    "Anexar relatório, slides e link do dashboard",
+    "Retrospectiva final"
+   ],
+   "responsavel": "",
+   "revisao": "",
+   "status": "a_fazer",
+   "issue": 25
+  }
+ ],
+ "fichas": {
+  "t01": {
+   "obj": "Grupo alinhado, com ambiente rodando e primeiro commit feito.",
+   "sai": [
+    "Ambiente instalado em cada máquina",
+    "Autoavaliação preenchida na issue fixada"
+   ],
+   "pronto": [
+    "Cada pessoa roda uma consulta no banco SPOLETO_BI",
+    "Cada pessoa abriu e teve aprovado um pull request"
+   ],
+   "ctx": "Primeira semana do grupo no projeto. O objetivo é sair com todo mundo rodando consulta na própria máquina e com um pull request aprovado, por menor que seja."
+  },
+  "t02": {
+   "obj": "Definir grão, fatos e dimensões antes de escrever qualquer SQL do modelo.",
+   "ent": [
+    "Views stg",
+    "docs/BASE_DADOS.md"
+   ],
+   "sai": [
+    "docs/modelo-dimensional.md com diagrama e grão de cada fato"
+   ],
+   "pronto": [
+    "O grão de cada fato cabe em uma frase",
+    "Modelo aprovado em reunião do grupo"
+   ],
+   "prompt": "Leia docs/BASE_DADOS.md e as as tabelas prontas (pedido, item_pedido, pagamento, produto, caixa_diario, producao, evento_pedido_ifood).\nProponha um modelo estrela para vendas de restaurante: liste os fatos com o grão de cada um e as dimensões, justificando cada escolha em uma linha.\nNão escreva o SQL ainda.",
+   "branch": "docs/20-modelo",
+   "ctx": "Decidir grão, fatos e dimensões no papel antes de escrever SQL. Meia hora de conversa aqui economiza duas semanas de retrabalho depois."
+  },
+  "t03": {
+   "obj": "Calendário e faixas de horário para todas as análises de tempo.",
+   "sai": [
+    "sql/03_dw/dim_data.sql",
+    "sql/03_dw/dim_horario.sql"
+   ],
+   "pronto": [
+    "Calendário de 2023 a 2027 sem lacunas",
+    "Feriados nacionais e de Cuiabá marcados",
+    "Períodos do dia: manhã, almoço, tarde e jantar"
+   ],
+   "prompt": "Crie sql/03_dw/dim_data.sql para SQL Server, de 2023-01-01 a 2027-12-31, com: data, ano, mês, nome do mês, semana ISO, dia da semana, indicador de fim de semana, feriado nacional e feriado de Cuiabá.\nDepois crie dim_horario com hora cheia, faixa de 30 minutos e período do dia.",
+   "branch": "feat/21-dim-data",
+   "ctx": "O calendário é a dimensão mais usada de todas: sem ela não existe comparação com o ano anterior nem análise de feriado. Cuiabá tem feriados próprios que afetam o movimento."
+  },
+  "t04": {
+   "obj": "Dimensões de produto, canal, forma de pagamento e status do pedido.",
+   "ent": [
+    "Views stg"
+   ],
+   "sai": [
+    "sql/03_dw/dim_produto.sql, dim_canal.sql, dim_forma_pagamento.sql e dim_status_pedido.sql"
+   ],
+   "reg": [
+    "11 IDs sem cadastro na loja"
+   ],
+   "pronto": [
+    "Chave única em cada dimensão",
+    "Membro Não informado com chave -1 em todas"
+   ],
+   "branch": "feat/22-dimensoes",
+   "ctx": "As dimensões dão nome aos códigos do banco. O membro Não informado com chave -1 evita perder vendas cujo produto ou canal não está cadastrado na loja."
+  },
+  "t05": {
+   "obj": "Fatos de venda no grão certo, ligados às dimensões.",
+   "ent": [
+    "dbo.pedido, dbo.item_pedido e dbo.pagamento",
+    "Dimensões do dw"
+   ],
+   "sai": [
+    "sql/03_dw/fato_pedido.sql, fato_venda_item.sql e fato_pagamento.sql"
+   ],
+   "pronto": [
+    "Faturamento do fato igual ao do staging",
+    "Nenhuma chave de dimensão nula",
+    "Grão respeitado: um pedido, um item, um pagamento por linha"
+   ],
+   "prompt": "Leia docs/modelo-dimensional.md.\nCrie os scripts dos fatos conforme a ficha T23, buscando as chaves nas dimensões e usando -1 quando não houver cadastro.\nValores em DECIMAL(12,2). Não altere sql/tests/.",
+   "branch": "feat/23-fatos-venda",
+   "ctx": "São os fatos que sustentam quase todo o dashboard. O cuidado aqui é respeitar o grão definido no desenho e não deixar chave nula."
+  },
+  "t06": {
+   "obj": "Fatos de caixa, produção e eventos do iFood.",
+   "ent": [
+    "dbo.caixa_diario, dbo.producao e dbo.evento_pedido_ifood"
+   ],
+   "sai": [
+    "sql/03_dw/fato_caixa_diario.sql, fato_producao.sql e fato_evento_pedido_online.sql"
+   ],
+   "pronto": [
+    "Caixa diário bate com caixa_encerrado",
+    "Tempos de produção com a mesma média do staging"
+   ],
+   "branch": "feat/24-fatos-operacao",
+   "ctx": "Fatos que usam as séries históricas: caixa diário desde 2023, tempo de produção por linha e as etapas do pedido do iFood."
+  },
+  "t07": {
+   "obj": "Carregar o modelo inteiro com um comando, e recarregar só os últimos dias no dia a dia.",
+   "sai": [
+    "sql/03_dw/carga.sql com carga completa e incremental"
+   ],
+   "pronto": [
+    "Dimensões carregam antes dos fatos",
+    "Recarregar os últimos 7 dias não duplica linhas",
+    "Log com início, fim e linhas afetadas"
+   ],
+   "prompt": "Escreva sql/03_dw/carga.sql com dois modos: completo e incremental dos últimos N dias.\nUse MERGE ou DELETE seguido de INSERT por período, garantindo que rodar duas vezes não duplique.\nRegistre início, fim e linhas afetadas numa tabela de log.",
+   "branch": "feat/25-carga-dw",
+   "ctx": "Sem carga incremental, atualizar o dashboard significa recarregar três anos toda vez. Reprocessar os últimos sete dias cobre correções e cancelamentos que chegam atrasados."
+  },
+  "t08": {
+   "obj": "Provar que o modelo bate com as fontes antes de abrir o dashboard.",
+   "sai": [
+    "sql/tests/test_reconciliacao_*.sql"
+   ],
+   "pronto": [
+    "Faturamento mensal do fato contra caixa_encerrado com diferença de até 1%",
+    "Pedidos por mês contra o log do banco",
+    "Nenhuma chave vazia nos fatos"
+   ],
+   "prompt": "Escreva consultas de reconciliação que comparem, mês a mês, o fato_pedido com caixa_encerrado e com log_done.\nCada consulta deve retornar 0 linhas quando a diferença for menor que 1%.",
+   "branch": "test/26-reconciliacao",
+   "ctx": "Última prova antes de abrir o dashboard: o modelo precisa bater com o fechamento de caixa e com o log de vendas do banco."
+  },
+  "t09": {
+   "obj": "Desenhar as páginas antes de construir, para não perder tempo no dashboard.",
+   "sai": [
+    "docs/wireframes/ com um rascunho por página"
+   ],
+   "pronto": [
+    "Cada visual tem escrito qual pergunta responde",
+    "Grupo aprovou os rascunhos"
+   ],
+   "ctx": "Desenhar no papel antes de arrastar visual na ferramenta. Cada visual precisa responder a uma pergunta de P1 a P9; o que não responder nada fica de fora."
+  },
+  "t10": {
+   "obj": "Dashboard conectado ao modelo, com relacionamentos e identidade visual.",
+   "ent": [
+    "Schema dw"
+   ],
+   "sai": [
+    "Arquivo do dashboard versionado em dashboard/",
+    "dashboard/tema.json"
+   ],
+   "pronto": [
+    "Modelo importado do dw",
+    "Relacionamentos 1:N em uma direção só",
+    "Tema aplicado em todas as páginas"
+   ],
+   "ctx": "Importar o modelo do dw, ligar as tabelas e aplicar o tema. Relacionamento errado aqui aparece como número errado em todas as páginas."
+  },
+  "t11": {
+   "obj": "Medidas oficiais, com nome e descrição, conferidas com SQL.",
+   "sai": [
+    "Medidas no modelo",
+    "docs/medidas.md"
+   ],
+   "pronto": [
+    "Faturamento, pedidos, ticket, itens por pedido, ano anterior, variação YoY e MoM, share do canal, attach rate, cancelamento e tempo de preparo",
+    "Cada medida conferida com uma consulta SQL equivalente"
+   ],
+   "prompt": "Escreva as medidas DAX da ficha T29 para um modelo estrela com fato_pedido, fato_venda_item e dim_data.\nPara cada medida, dê o código e uma linha explicando o contexto de filtro.\nNão use colunas calculadas quando uma medida resolver.",
+   "branch": "feat/29-medidas",
+   "ctx": "As medidas são o vocabulário do dashboard. Cada uma precisa bater com uma consulta SQL, senão o painel vira opinião."
+  },
+  "t12": {
+   "obj": "Página que responde como foi ontem, a semana e o mês.",
+   "ent": [
+    "Medidas base"
+   ],
+   "sai": [
+    "Página Visão geral no dashboard"
+   ],
+   "pronto": [
+    "Faturamento, pedidos e ticket com variação contra o período anterior",
+    "Tendência das últimas 13 semanas",
+    "Share do iFood e taxa de cancelamento",
+    "Números batem com a consulta de validação"
+   ],
+   "ctx": "Página que o franqueado abre todo dia: como foi ontem, a semana e o mês, com comparação contra o período anterior."
+  },
+  "t13": {
+   "obj": "Página de evolução e sazonalidade das vendas.",
+   "sai": [
+    "Página Vendas e sazonalidade"
+   ],
+   "pronto": [
+    "Série diária, semanal e mensal desde 2023",
+    "Comparação ano a ano pelo mesmo dia da semana",
+    "Índice sazonal por mês",
+    "Números batem com a consulta de validação"
+   ],
+   "ctx": "Responde P1, P5 e P7. É onde o histórico de três anos aparece e onde dá para ver que fevereiro é sempre o mês mais fraco."
+  },
+  "t14": {
+   "obj": "Página do cardápio: o que vende, o que cai e o que se vende junto.",
+   "sai": [
+    "Página Cardápio"
+   ],
+   "pronto": [
+    "Mix e curva ABC por produto e categoria",
+    "Lista de produtos em queda",
+    "Attach rate e ingredientes mais escolhidos"
+   ],
+   "ctx": "Responde P2, P3 e P8. Mostra o que vende, o que está caindo e o que sai junto, incluindo os ingredientes mais escolhidos no monte seu prato."
+  },
+  "t15": {
+   "obj": "Página de canais, com a operação do iFood.",
+   "sai": [
+    "Página Canais e iFood"
+   ],
+   "pronto": [
+    "Share e ticket por canal",
+    "Tempos de aceite, preparo, espera e entrega",
+    "Taxa de cancelamento por canal"
+   ],
+   "ctx": "Responde P9. Compara salão e iFood em volume, ticket e tempo, usando a trilha de eventos que o sistema da loja guarda desde 2023."
+  },
+  "t16": {
+   "obj": "Página da operação: onde o pico aperta.",
+   "sai": [
+    "Página Operação e cozinha"
+   ],
+   "pronto": [
+    "Mapa de calor por dia da semana e hora",
+    "Pico de 15 minutos",
+    "Tempo de preparo por linha de produção"
+   ],
+   "ctx": "Responde P4. Mapa de calor por dia e hora, pico de quinze minutos e tempo de preparo por linha: é a página que ajuda a montar escala."
+  },
+  "t17": {
+   "obj": "Página de pagamentos e conferência de caixa.",
+   "sai": [
+    "Página Pagamentos e caixa"
+   ],
+   "pronto": [
+    "Mix de pagamento e bandeiras",
+    "Quebra de caixa por dia",
+    "Cashback resgatado"
+   ],
+   "ctx": "Fecha o ciclo do dinheiro: formas de pagamento, bandeiras, quebra de caixa e cashback resgatado."
+  },
+  "t18": {
+   "obj": "Colocar o dashboard no ar para o grupo e o professor.",
+   "sai": [
+    "Link publicado",
+    "Projeto salvo em formato versionável em dashboard/"
+   ],
+   "pronto": [
+    "O link abre fora da rede do grupo",
+    "Link registrado no README"
+   ],
+   "ctx": "Colocar no ar é entregável da disciplina. O link precisa abrir fora da rede do grupo, no celular de qualquer pessoa."
+  },
+  "t19": {
+   "obj": "Ver o dashboard sendo usado por quem conhece a loja.",
+   "sai": [
+    "Roteiro de validação",
+    "Issues abertas com os problemas encontrados"
+   ],
+   "pronto": [
+    "O franqueado responde as perguntas P1 a P9 sozinho",
+    "Cada problema virou uma issue com prioridade"
+   ],
+   "ctx": "Validar com quem conhece a loja é o que separa um trabalho bonito de um trabalho útil. O teste é simples: o franqueado responde as perguntas P1 a P9 sozinho, sem ninguém explicando."
+  },
+  "t20": {
+   "obj": "Fechar o que a validação apontou.",
+   "pronto": [
+    "Nenhuma issue crítica aberta",
+    "Correções revisadas por outra pessoa"
+   ],
+   "ctx": "Corrigir o que a validação apontou, priorizando o que impede alguém de responder uma pergunta."
+  },
+  "t21": {
+   "obj": "Documentação que permite outra pessoa montar o projeto do zero.",
+   "sai": [
+    "README final",
+    "docs/manual-uso.md",
+    "Arquitetura, dicionário, regras e modelo revisados"
+   ],
+   "pronto": [
+    "Alguém de fora consegue montar o ambiente seguindo o README",
+    "Cada página do dashboard tem um parágrafo de como usar"
+   ],
+   "ctx": "Documentação é nota na disciplina e é o que permite outra pessoa montar o projeto do zero. O teste é entregar o README para alguém de fora seguir."
+  },
+  "t22": {
+   "obj": "Primeira versão completa do relatório acadêmico.",
+   "sai": [
+    "Rascunho do relatório"
+   ],
+   "pronto": [
+    "Todas as seções escritas: problema, metodologia, arquitetura, higienização, modelo, resultados, uso de IA e limitações",
+    "Cada pessoa escreveu a parte da sua frente"
+   ],
+   "ctx": "O relatório é escrito em cima do que já foi feito: cada pessoa escreve a parte da frente que conduziu, com print e número real."
+  },
+  "t23": {
+   "obj": "Relatório final revisado e formatado.",
+   "sai": [
+    "Relatório em PDF"
+   ],
+   "pronto": [
+    "Revisão cruzada feita",
+    "Referências e figuras conferidas"
+   ],
+   "ctx": "Revisão cruzada: ninguém revisa o próprio texto. Formatação e referências conferidas antes de gerar o PDF."
+  },
+  "t24": {
+   "obj": "Apresentação com demonstração ao vivo.",
+   "sai": [
+    "Slides",
+    "Roteiro da demonstração"
+   ],
+   "pronto": [
+    "Demonstração ensaiada em menos de 10 minutos",
+    "Cada pessoa sabe a parte que vai falar"
+   ],
+   "ctx": "A banca vê a demonstração ao vivo. Ensaiar é o que evita descobrir na hora que o filtro da página trava."
+  },
+  "t25": {
+   "obj": "Fechar o projeto no GitHub com tudo anexado.",
+   "sai": [
+    "Release v1.0"
+   ],
+   "pronto": [
+    "Relatório, slides e link do dashboard anexados",
+    "Retrospectiva registrada em docs/semanas/"
+   ],
+   "ctx": "Fechar o projeto no GitHub com tudo anexado é o que transforma o repositório em portfólio para os cinco."
+  },
+  "t00": {
+   "obj": "Deixar pronto, fora do repositório do grupo, um banco de dados simples e já limpo para o projeto.",
+   "sai": [
+    "Banco SPOLETO_BI (banco/spoleto_bi.bak)",
+    "As mesmas tabelas em JSON (dados/)"
+   ],
+   "pronto": [
+    "Banco e arquivos JSON disponíveis no repositório",
+    "docs/BASE_DADOS.md descrevendo as tabelas"
+   ],
+   "ctx": "Antes de começar a modelagem, alguém precisa ter acessado a fonte de dados original, entendido o que ela tinha, extraído o necessário e organizado num banco novo e mais simples. Esse trabalho foi feito fora deste repositório; aqui só chega o resultado."
+  }
+ },
+ "repo": "https://github.com/AlexandreBicudo/bi-spoleto",
+ "publico": true
+}
